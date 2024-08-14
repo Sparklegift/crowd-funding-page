@@ -1,0 +1,13 @@
+if (!openRadio){
+    setOpenRadio(false)
+    setOpenRadio((prevState) => ({
+        ...prevState,
+        [index]: !prevState[index],
+    }));
+}else {
+    setOpenRadio(!openRadio);
+    setOpenRadio((prevState) => ({
+        ...prevState,
+        [index]: !prevState[index],
+      }));
+}
