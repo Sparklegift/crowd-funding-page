@@ -13,6 +13,7 @@ export default {
       colors: {
         cya: {
           'moderate': '#3cb4ac',
+          'moderate2': '#165551',
           'dark': 'hsl(0, 0%, 48%)',
         },
 
@@ -24,11 +25,14 @@ export default {
       },
 
       padding: {
+        '4.5': '1.6rem',
+        '3.5': '0.9rem',
         '5.5': '1.4rem',
         '12.5': '3.1rem',
         '37': '9.6rem',
         '15': '3.6rem',
-        '31': '9.7rem'
+        '19': '4.69rem',
+        '13': '3.4rem',
       },
 
       width: {

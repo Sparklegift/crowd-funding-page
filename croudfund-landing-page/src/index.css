@@ -6,5 +6,9 @@
 
 body {
     font-family: 'Commissioner', sans-serif;
-    /* color: #7a7a7a2d; */
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
   }
