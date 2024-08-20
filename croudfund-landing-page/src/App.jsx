@@ -12,6 +12,7 @@ function App() {
   const navigate = useNavigate();
 
   const hoverClick = (targetId) => {
+    setIsOpen();
     navigate('/');
     setTimeout(() => {
       document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
@@ -44,7 +45,7 @@ function App() {
 
   return (
     <>
-      <Navbar toggleMenu={toggleMenu} isOpen={isOpen} isOpen1={isOpen1} hoverClick={hoverClick} />
+      <Navbar toggleMenu={toggleMenu} isOpen={isOpen} isOpen1={isOpen1} hoverClick={hoverClick} setIsOpen={setIsOpen} />
       <Home isOpen={isOpen} toggleMenu1={toggleMenu1} isOpen1={isOpen1} isHovered={isHovered} setIsOpen1={setIsOpen1} />
     </>
   )

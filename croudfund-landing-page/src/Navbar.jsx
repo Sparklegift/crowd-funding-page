@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 
 
-const Navbar = ({ toggleMenu, isOpen, isOpen1, hoverClick  }) => {
+const Navbar = ({ toggleMenu, isOpen, isOpen1, hoverClick, setIsOpen }) => {
     
     const navigate = useNavigate();
 
@@ -10,6 +10,7 @@ const Navbar = ({ toggleMenu, isOpen, isOpen1, hoverClick  }) => {
         setTimeout(() => {
             document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
         }, 10);
+        setIsOpen(false)
 };
 
 

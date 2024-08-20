@@ -5,7 +5,7 @@ import Thankscard from "./Thankscard";
 import { useNavigate } from "react-router-dom";
 
 
-const Home = ({ isOpen, toggleMenu1, isOpen1, isHovered, setIsOpen1 }) => {
+const Home = ({ isOpen, toggleMenu1, isOpen1, isHovered, setIsOpen }) => {
 
     const card = [
             {
