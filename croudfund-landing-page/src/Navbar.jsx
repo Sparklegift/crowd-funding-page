@@ -44,9 +44,9 @@ const Navbar = ({ toggleMenu, isOpen, isOpen1, hoverClick  }) => {
                             <div className={`transition-all duration-1000 ease-in-out w-10/12 rounded-lg bg-white z-20 fixed ${isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full'}`}>
                                 <div className="">
                                     <ul className="text-lg font-Commissioner font-semibold grid gap-5 mt-5 pb-5">
-                                        <li className="ml-6">About</li><hr/>
-                                        <li className="ml-6">Discover</li><hr/>
-                                        <li className="ml-6">Get Started</li>
+                                        <li onClick={() => handleNavigation('about')} className="ml-6">About</li><hr/>
+                                        <li onClick={() => handleNavigation('discover')} className="ml-6">Discover</li><hr/>
+                                        <li onClick={() => hoverClick('Started')} className="ml-6">Get Started</li>
                                     </ul>
                                 </div>
                             </div>
