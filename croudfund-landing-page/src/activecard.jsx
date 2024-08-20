@@ -58,7 +58,7 @@ const {title, subTitle, day, content} = card;
                                     <input type="number" name="continue" placeholder="25" min={25} max={1000} className="border-none  outline-none  text-lg md:text-base md:font-bold font-extrabold placeholder:text-black w-6" />
                                 </div>
 
-                                <div className="w-5/12 md:w-28 cursor-pointer bg-cya-moderate rounded-full flex justify-center" onClick={handlesummit} >
+                                <div className="w-5/12 md:w-28 cursor-pointer bg-cya-moderate rounded-full flex justify-center" onClick={() => handlesummit('thankscard')} >
                                     <div className="p-3 md:p-1 flex justify-center items-center text-white font-bold">Continue</div>
                                 </div>
                             </div>

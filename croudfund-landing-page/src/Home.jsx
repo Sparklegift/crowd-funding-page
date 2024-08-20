@@ -5,7 +5,7 @@ import Thankscard from "./Thankscard";
 import { useNavigate } from "react-router-dom";
 
 
-const Home = ({ isOpen, toggleMenu1, isOpen1, isHovered, setIsOpen }) => {
+const Home = ({ isOpen, toggleMenu1, isOpen1, isHovered, setIsOpen1 }) => {
 
     const card = [
             {
@@ -40,9 +40,13 @@ const Home = ({ isOpen, toggleMenu1, isOpen1, isHovered, setIsOpen }) => {
     const navigate = useNavigate();
     const [submitted, setSubmitted] = useState(false);
 
-    const handlesummit = () => {
-      setSubmitted(true);
-      console.log(submitted);
+    const handlesummit = (targetId) => {
+        navigate('/');
+        setTimeout(() => {
+            document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+        }, 10);
+        setSubmitted(true);
+        console.log(submitted);
     }
 
     const handleConsole = (index, targetId) => {
@@ -75,7 +79,7 @@ const Home = ({ isOpen, toggleMenu1, isOpen1, isHovered, setIsOpen }) => {
             if (targetElement) {
                 targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
-            setReward(false);  // Reset reward or any other state after scroll
+            setReward(false);
         }, 200);
         console.log(reward);
     };
@@ -249,7 +253,7 @@ const Home = ({ isOpen, toggleMenu1, isOpen1, isHovered, setIsOpen }) => {
                     ))}
                 </div>
             </div> 
-            <div className={`flex absolute top-9 md:top-64 justify-center items-center z-50 ${submitted ? `block` : `hidden `}`}>
+            <div id="thankscard" className={`flex absolute top-9 md:top-64 justify-center items-center z-50 ${submitted ? `block` : `hidden `}`}>
                 <Thankscard />
             </div>
         </div> 
